@@ -1,6 +1,6 @@
 # Connect-Now
 
-> *Rest API with MONGODB and Spring Boot.*
+> *Frontend for the REST API in SPRING BOOT.*
 
 ---
 
