@@ -1,18 +1,26 @@
-function NotFound() {
+import { HouseLine } from "phosphor-react"
+import { TypeAnimation } from "react-type-animation"
+
+const Notfoundpage = () => {
+
     return (
-        <>
-            <div className="h-screen w-screen flex flex-col items-center bg-[#1C1C1C] rounded-md p-7">
-                <h1 className="text-center text-4xl font-bold text-red-500">
-                    404 Not Found
-                </h1>
-                <a href="/" className="text-center text-4xl font-bold text-red-500">
-                    <i className="fas fa-home"></i> Go Home
-                </a>
-            </div>
-
-        </>
+        <main className='bg-[#121214] min-h-screen flex flex-col justify-center items-center'>
+            <TypeAnimation
+                sequence={[
+                    '@user:~$ cd /home',
+                    1000,
+                    'bash: 404: webpage not found'
+                ]}
+                wrapper="h1"
+                cursor={true}
+                repeat={2000}
+                className="text-green-400  font-bold text-3xl"
+            />
+            <a href='/Home' className='text-green-400 mt-5  font-bold text-xl animate-pulse'>
+                <HouseLine size={80} weight="fill" className="mt-6" />
+            </a>
+        </main>
     )
-
 }
 
-export default NotFound;
+export default Notfoundpage
