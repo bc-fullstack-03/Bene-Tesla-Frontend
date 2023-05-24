@@ -17,25 +17,32 @@ Frontend para a rede social Connect Now(Parrot Sysmap), neste rede social estamo
 # Home page
 
 Aqui temos a pagina inicial da nossa aplicação:
-![Captura de tela de 2023-05-24 13-55-40](https://github.com/bc-fullstack-03/Bene-Tesla-Frontend/assets/78994881/ea921487-b75a-448d-8440-84cdcf31fb1e)
+
+
+
+![Captura](https://github.com/bc-fullstack-03/Bene-Tesla-Frontend/assets/78994881/07f9923a-4f33-43b7-a6e8-418aa2156040)
 
 # Profile Page
 Pagina responsavel por guarda a informação do perfil do usuario
-![Captura de tela de 2023-05-24 13-55-32](https://github.com/bc-fullstack-03/Bene-Tesla-Frontend/assets/78994881/128f68ec-4640-46e1-b3c0-a0e8d105dcb1)
+
+![Captura](https://github.com/bc-fullstack-03/Bene-Tesla-Frontend/assets/78994881/11c49936-136d-4bdb-8809-f0efcda6d971)
 
 # Post Page
 DropDown para a criacao de post
 
-![Captura de tela de 2023-05-24 13-55-27](https://github.com/bc-fullstack-03/Bene-Tesla-Frontend/assets/78994881/d160b25e-f4e4-4b19-97d7-644d3ed29db6)
+![Captura](https://github.com/bc-fullstack-03/Bene-Tesla-Frontend/assets/78994881/a19728ea-a3f3-45a8-ad7a-65c155439a64)
+
 
 # Friends Page 
 pagina de amigos
 
-![Captura de tela de 2023-05-24 13-55-22](https://github.com/bc-fullstack-03/Bene-Tesla-Frontend/assets/78994881/a4fb43c3-7754-4c90-848d-e8b75f8a143c)
+![Captura](https://github.com/bc-fullstack-03/Bene-Tesla-Frontend/assets/78994881/1d005e5c-5988-44d2-9361-1f2efd640197)
+
 
 # Not found page:
 Esta pagina e o tratamento de erros da nossa aplicacao
-![image_2023-05-24_140018406](https://github.com/bc-fullstack-03/Bene-Tesla-Frontend/assets/78994881/0377033e-cfa8-4be7-bab8-17981a829f3f)
+
+![Captura](https://github.com/bc-fullstack-03/Bene-Tesla-Frontend/assets/78994881/976b0a72-cd25-41c3-a132-13d10ade0a38)
 
 # Stack utilizada
 # Backend
