@@ -1,10 +1,9 @@
-import { useNavigate } from 'react-router-dom'
-import jwt_decode from 'jwt-decode'
-import AuthForm, { Auth } from "../../components/authform/index"
-import api from "../../services/api"
+import jwt_decode from 'jwt-decode';
+import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import "./Login.css"
+import AuthForm, { Auth } from "../../components/Authform/index";
+import api from "../../services/api";
 interface UserToken {
     profile: {
         _id: string;
@@ -41,8 +40,7 @@ function Login() {
             localStorage.setItem('name', decodedToken.profile.name)
             localStorage.setItem('user', decodedToken.user)
             localStorage.setItem('accessToken', res.data.accessToken)
-
-            return navigate("/home")
+            return navigate("/Home")
         } catch (err) {
             console.error(err)
             toast.error("Please enter a valid username and password", {
@@ -63,7 +61,7 @@ function Login() {
                 submitFormButton="Login"
                 linkDescription="Don't have an account? create one here"
                 submitFormButtonAction={handleLogin}
-                routeName="/Sigin"
+                routeName="/Signup"
             />
             <ToastContainer />
         </>

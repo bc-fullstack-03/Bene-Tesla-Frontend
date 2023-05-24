@@ -1,8 +1,8 @@
-import { useNavigate } from "react-router-dom"
-import AuthForm, { Auth } from "../../components/authform/index"
-import api from "../../services/api"
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import AuthForm, { Auth } from "../../components/Authform/index";
+import api from "../../services/api";
 
 
 function SignUp() {
