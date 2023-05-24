@@ -1,6 +1,6 @@
 # Connect-Now
 
-> *Frontend for the REST API in SPRING BOOT.*
+> *Frontend*
 
 ---
 
@@ -13,8 +13,16 @@
 
 ***Projeto Frontend - [frontend](https://github.com/bc-fullstack-03/Bene-Tesla-Frontend)***
 
-## <img width="25px" src="https://user-images.githubusercontent.com/78994881/235503050-28fec3b1-1adc-48a2-b767-e4d560ccf1e7.png" alt="Javascript Icon" /> Backend
+## <img width="25px" src="https://github.com/bc-fullstack-03/Bene-Tesla-Mobile/assets/78994881/f6b55e44-ec08-4b1e-8fb6-9fec9f898bb6" alt="Javascript Icon" /> Mobile
 
+
+---
+
+
+***Projeto Mobile- [Mobile](https://github.com/bc-fullstack-03/Bene-Tesla-Mobile)***
+
+
+## <img width="25px" src="https://user-images.githubusercontent.com/78994881/235503050-28fec3b1-1adc-48a2-b767-e4d560ccf1e7.png" alt="Javascript Icon" /> Backend
 
 ---
 
@@ -34,3 +42,4 @@
 ## *Licença*
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
