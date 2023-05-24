@@ -15,7 +15,7 @@ function Heading({size = 'md', children, asChild, className} : HeadingProps) {
     return (
         <Comp
         className={clsx(
-            "font-sans font-bold", 
+            "font-sans font-bold",
             {
             "text-sm": size === 'xxs',
             "text-lg": size === 'xs',
