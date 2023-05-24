@@ -1,28 +1,13 @@
 export interface Post{
-    id: String;
-    title: String;
-    content: String;
-    category: String;
-    tags: String[];
+    _id: number;
+    "title": String;
+    "description": String[];
+    "profile":{
+        "name": String[];     
+    },
+    'comments': String[];
+    'likes': String[];
+    'image':boolean | string;
 
-    profile:{
-        name: String;        
-    }
-    comments:{
-        id: String;
-        body: String;
-        likes:String[];
-
-        profile:{
-            photo:boolean;
-            photoUri: String;
-            id: String;
-            name: String;
-            username: String;
-        }  
-    }
-    likes:String[];
-    photo:boolean;
-    photoUri: String;
-    likeByUserId ?: String;
 }
+
