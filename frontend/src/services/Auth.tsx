@@ -9,6 +9,13 @@ function getAutheader() {
     }
     return autheader;
 }
+function getProfile() {
+    const profile = localStorage.getItem('profile') as string;
+    return profile;
+}
+function getUser(): string {
+    const user = localStorage.getItem('user') as string;
+    return user;
+}
 
-
-export {getAutheader}
+export { getAutheader, getProfile,  getUser };
