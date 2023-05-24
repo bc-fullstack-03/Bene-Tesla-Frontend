@@ -1,13 +1,16 @@
 import { UserCircle } from "phosphor-react";
-import { Post}  from "../../model/Post";
+import { Post } from "../../model/Post";
 import Heading from "../Heading/Heading";
-import Text from "../Text/Text";
 import PostItem from "../PostItem/PostItem";
+import Text from "../Text/Text";
 interface FeedProps {
-    posts: Post[];
+    post: Post[];
+    handleLike: (postId: number) => void;
 }
-function Feed({ posts }: FeedProps) {
-    const user =localStorage.getItem('user')
+function Feed({ post , handleLike}: FeedProps) {
+    const user = localStorage.getItem('user');
+   
+
     return (
         <div className="basis-5/6 overflow-y-auto scroll-smooth bg-[#121214]">
             <Heading size="lg" className="border-b border-slate-400 mt-2">
@@ -22,8 +25,8 @@ function Feed({ posts }: FeedProps) {
                 </div>
 
             </Heading>
-            <section className="flex flex-col">
-                { posts && posts.map((post : Post) => <PostItem post={post} />)
+            <section className="flex flex-col" >
+                { post && post.map((post : Post) => <PostItem post={post} key={post._id}  handleLike={handleLike}/>)
                 }
              </section>
         </div>
