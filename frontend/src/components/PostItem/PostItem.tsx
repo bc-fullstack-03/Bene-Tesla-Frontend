@@ -1,14 +1,16 @@
 import { ChatCircleDots, Heart, UserCircle } from "phosphor-react";
 import { Post } from "../../model/Post";
+import { getProfile } from "../../services/Auth";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
 
 
 interface PostItem {
-  post: Post
+  post: Post | any;
+  handleLike: (postId : number) => void
 }
-function PostItem({ post }: PostItem) {
-  console.log(post);
+function PostItem({ post , handleLike}: PostItem) {
+
 
   return (
     <div className="border-b slate-400" key={post._id}>
@@ -18,17 +20,29 @@ function PostItem({ post }: PostItem) {
       </Heading>
       <div className="ml-10 flex flex-col gap-2">
         <Heading size="sm" className="text-slate-300">{post.title}</Heading>
-        <Text asChild>
-          <p className="text-slate-300 mr-3">{post.description}</p>
-        </Text>
+        {post.image ? (
+          <img src={`http://localhost:9000/${post.description}`} alt="Post" className="max-h-96 rounded-lg" />
+        ) : (
+          <Text asChild>
+            <p className="text-slate-300 mr-3">{post.description}</p>
+          </Text>
+        )
+
+        }
         <footer className="flex items-center ml-5 my-6 space-x-8">
-        
-          <ChatCircleDots size={32}  className="text-slate-300" />
-          <Text className="text-slate-300 mr-5">{post.comments.length || 0}</Text>
-          <div className="hover:bg-blue-500 hover:text-white rounded-full p-1 cursor-pointer">
-          <Heart size={32}  className="text-slate-300" />
+          <div className="cursor-pointer">
+            <ChatCircleDots size={32} className="text-slate-300" />
+            <Text className="text-slate-300 mr-5 ml-3">{post.comments.length}</Text>
           </div>
-          <Text className="text-slate-300 mr-5">{post.likes.length}</Text>
+          <div className=" cursor-pointer" onClick={() =>  handleLike(post._id)}>
+            {post.likes.includes(getProfile()) ?(
+              <Heart size={32} weight="fill" className="text-red-500" />
+            ):(
+              <Heart size={32} className="text-slate-300" />
+            )}            
+            <Text className="text-slate-300 mr-5 ml-3">{post.likes.length}</Text>
+          </div>
+
         </footer>
       </div>
     </div>

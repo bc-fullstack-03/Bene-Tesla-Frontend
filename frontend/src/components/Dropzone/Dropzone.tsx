@@ -12,16 +12,14 @@ function Dropzone({ onFileUploaded }: DropzoneProps) {
   const onDrop = useCallback(
     (acceptedFiles: any[]) => {
       const file = acceptedFiles[0];
-
       const fileURL = URL.createObjectURL(file);
-
       setSelectedFileUrl(fileURL);
       onFileUploaded(file);
     },
     [onFileUploaded]
   );
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+  const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
   return (
     <div className="flex mt-4" {...getRootProps()}>
@@ -30,9 +28,7 @@ function Dropzone({ onFileUploaded }: DropzoneProps) {
       {selectedFileUrl ? (
         <img src={selectedFileUrl} className="max-h-96 rounded-lg" />
       ) : (
-        <Text size="sm">
-            Drag your image here
-            ..</Text>
+        <Text size="sm">Drag your image here ..</Text>
       )}
     </div>
   );
